@@ -1,3 +1,5 @@
+
+require('dotenv').config();
 const { test, expect } = require('@playwright/test');
 
 test.describe('X (Twitter) login ve DM gönderme testi', () => {
@@ -14,24 +16,27 @@ test.describe('X (Twitter) login ve DM gönderme testi', () => {
 
     // E-posta kutusuna yaz ve doğrula
     const eposta = page.getByRole('textbox', { name: 'Phone, email, or username' });
-    const myEposta = 'kelamibatushan@gmail.com';
-    await eposta.fill(myEposta);
-    await expect(eposta).toHaveValue(myEposta); 
-    await page.keyboard.press('Enter');
+
+  const myEposta = process.env.PW_EMAIL;
+  await eposta.fill(myEposta);
+  await expect(eposta).toHaveValue(myEposta); 
+  await page.keyboard.press('Enter');
 
     // Kullanıcı adını yaz ve doğrula
     const username = page.getByTestId('ocfEnterTextTextInput');
-    const myUserName = 'BolukbasK9539';
-    await username.fill(myUserName);
-    await expect(username).toHaveValue(myUserName); 
-    await page.keyboard.press('Enter');
+
+  const myUserName = process.env.PW_USERNAME;
+  await username.fill(myUserName);
+  await expect(username).toHaveValue(myUserName); 
+  await page.keyboard.press('Enter');
 
     // Şifreyi gir ve kontrol et
     const sifre = page.getByRole('textbox', { name: 'Password Reveal password' });
-    const mySifre = 'kbl79587081';
-    await sifre.fill(mySifre);
-    await expect(sifre).toHaveValue(mySifre);
-    await page.keyboard.press('Enter');
+
+  const mySifre = process.env.PW_PASSWORD;
+  await sifre.fill(mySifre);
+  await expect(sifre).toHaveValue(mySifre);
+  await page.keyboard.press('Enter');
 
     // DM sekmesi görünür olmalı ve tıklanmalı
     const dmButton = page.getByTestId('AppTabBar_DirectMessage_Link');
