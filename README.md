@@ -1,4 +1,4 @@
-# Mini Projects - Test Suites
+# Software Tests - Test Suites
 
 This repository contains a collection of **mini projects** focusing on software testing with **Playwright**, **Jest**, **Node.js**, and **MongoDB**.  
 The projects are organized into two main categories: **end-to-end tests** and **unit/integration tests**.
@@ -8,8 +8,8 @@ The projects are organized into two main categories: **end-to-end tests** and **
 ## 📂 Project Structure
 
 ### PlaywrightTests/
-- **hw6SocialMedia.spec.js: Tests the authentication and messaging workflow on X (Twitter). Covers login with email/username/password, accessing the DM section, starting a new conversation, and verifying that the message count increases.  
-- **hw7ShoppingCart.spec.js: End-to-end shopping cart test on Trendyol. Includes navigating categories, applying price filters, adding/removing products to/from the cart, verifying product prices, shipping costs, and quantity adjustments.
+- **hw6SocialMedia.spec.js:** Tests the authentication and messaging workflow on X (Twitter). Covers login with email/username/password, accessing the DM section, starting a new conversation, and verifying that the message count increases.  
+- **hw7ShoppingCart.spec.js:** End-to-end shopping cart test on Trendyol. Includes navigating categories, applying price filters, adding/removing products to/from the cart, verifying product prices, shipping costs, and quantity adjustments.
 
 ### Unit&IntegrationTests/
 - **hw1-islemler.js** & **hw1-islemler.test.js**: Basic operations and their unit tests.  
